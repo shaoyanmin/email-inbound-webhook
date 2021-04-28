@@ -16,7 +16,7 @@ To run this project, you will need to add the following environment variables:
 
 `DATABASE_URL` **required**
 
-`EMAIL_SUFFIX_FILTER_TO` **required**
+`SUFFIX_FILTER_EMAIL_TO` **required**
 
 `PORT` *optional*
 

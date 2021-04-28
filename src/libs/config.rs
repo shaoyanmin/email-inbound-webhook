@@ -17,7 +17,7 @@ impl Config {
         let get = |name: &'static str| env::var(name).unwrap_or_default();
         let log_level = get("LOG_LEVEL");
         let db_uri = get("DATABASE_URL");
-        let suffix_filter_to = get("EMAIL_SUFFIX_FILTER_TO");
+        let suffix_filter_to = get("SUFFIX_FILTER_EMAIL_TO");
         let port = get("PORT");
         Self { log_level, db_uri, suffix_filter_to, port }
     }
@@ -43,7 +43,7 @@ impl Config {
                 Arg::with_name("suffix_filter")
                     .short("s")
                     .long("suffix_filter")
-                    .value_name("EMAIL_SUFFIX_FILTER_TO")
+                    .value_name("SUFFIX_FILTER_EMAIL_TO")
                     .help("Sets suffix filter for where email sent to")
                     .takes_value(true),
             )
@@ -95,7 +95,7 @@ impl Config {
         }
 
         if self.suffix_filter_to.is_empty() {
-            println!("Miss env var EMAIL_SUFFIX_FILTER_TO, try --help for more information.");
+            println!("Miss env var SUFFIX_FILTER_EMAIL_TO, try --help for more information.");
             std::process::exit(1);
         }
     }
