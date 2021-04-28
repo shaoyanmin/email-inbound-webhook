@@ -8,15 +8,17 @@ you can query them for automation test or email content parsing.
 
 ```bash
 cargo install --git https://github.com/shaoyanmin/email-inbound-webhook.git 
+
+email-inbound-webhook --help
 ```
 
 ## Environment Variables & CLI Arguments
 
-To run this project, you will need to add the following environment variables:
+To run this project, you will need to add the following environment variables ([example](.env.exmpale)):
 
-`DATABASE_URL` **required**
+`DATABASE_URL` **required**. Sqlite db file URI
 
-`SUFFIX_FILTER_EMAIL_TO` **required**
+`SUFFIX_FILTER_EMAIL_TO` **required**. In case of abuse, filter emails by this when saving or querying.
 
 `PORT` *optional*
 
@@ -44,7 +46,7 @@ Or you can override these configs with cli arguments, try `-h` for more informat
 | `<EMAIL>` | `string` | **Required**. emails' destination address |
 | `<CREATED_AFTER>` | `number` | **Required** emails received after this timestamp, e.g., JavaScript `Date.now()` |
 
-#### SendGrid Inbound Parse Webhook Payload
+#### Receive SendGrid Inbound Parse Webhook Payload
 
 ```http
   POST /sendgrid
