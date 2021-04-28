@@ -6,8 +6,6 @@ you can query them for automation test or email content parsing.
 
 ## Installation
 
-Install my-project with npm
-
 ```bash
 cargo install --git https://github.com/shaoyanmin/email-inbound-webhook.git 
 ```

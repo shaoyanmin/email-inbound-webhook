@@ -27,8 +27,6 @@ async fn main() -> tide::Result<()> {
     builder.filter_level(log_level);
     builder.init();
 
-    debug!("{:?}", CONFIG);
-
     let state = ctx::Context::new().await;
     let mut app = tide::with_state(state);
 
