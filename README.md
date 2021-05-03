@@ -1,5 +1,6 @@
 
 # Email Inbound Webhook
+![build status](https://github.com/shaoyanmin/email-inbound-webhook/actions/workflows/rust.yml/badge.svg?branch=master)
 
 Receive emails via [SendGrid inbound email parse webhook](https://sendgrid.com/docs/for-developers/parsing-email/setting-up-the-inbound-parse-webhook/). Then
 you can query them for automation test or email content parsing.
