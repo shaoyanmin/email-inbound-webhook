@@ -1,5 +1,5 @@
 use super::model::Email;
-use crate::libs::prelude::{Query, QueryAs};
+use crate::libs::types::{Query, QueryAs};
 
 impl Email {
     pub fn sql_create<'a>(
